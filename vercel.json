@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": ".production/server.js",
+      "src": ".production/*.js",
       "use": "@now/node",
       "config": {
         "includeFiles": [
