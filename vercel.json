@@ -6,7 +6,11 @@
       "use": "@vercel/static"
     },
     {
-      "src": ".production/**.js",
+      "src": ".production/client.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": ".production/server.js",
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
