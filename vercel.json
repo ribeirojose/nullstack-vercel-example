@@ -1,14 +1,20 @@
 {
   "version": 2,
-  "functions": {
-    "api/nullstack.js": {
-      "includeFiles": "**/**"
+  "builds": [
+    {
+      "src": ".production/server.js",
+      "use": "@now/node",
+      "config": {
+        "includeFiles": [
+          "**/**"
+        ]
+      }
     }
-  },
+  ],
   "routes": [
     {
       "src": "(.*)",
-      "dest": "api/nullstack.js"
+      "dest": ".production/server.js"
     }
   ]
 }
