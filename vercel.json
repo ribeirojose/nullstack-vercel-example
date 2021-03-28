@@ -2,8 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": ".production/*.js",
-      "use": "@now/node",
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": ".production/**.js",
+      "use": "@vercel/node",
       "config": {
         "includeFiles": [
           "**/**"
