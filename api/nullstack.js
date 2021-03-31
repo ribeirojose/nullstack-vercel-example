@@ -1,1 +1,3 @@
-export {default} from '../.production/server';
+import context from '../.production/server';
+
+export default context.server;

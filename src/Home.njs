@@ -10,6 +10,15 @@ class Home extends Nullstack {
     page.locale = 'en-US';
   }
 
+  static async serverFunction() {
+    return new Date();
+  }
+
+  async initiate() {
+    const date = await this.serverFunction()
+    console.log({date});
+  }
+
   renderLink({ children, href }) {
     const link = href + '?ref=create-nullstack-app';
     return (
