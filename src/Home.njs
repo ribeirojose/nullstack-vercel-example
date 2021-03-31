@@ -14,7 +14,7 @@ class Home extends Nullstack {
     return new Date();
   }
 
-  async initiate() {
+  async hydrate() {
     const date = await this.serverFunction()
     console.log({date});
   }
