@@ -1,28 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": ".production/client.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": ".production/server.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "**/**"
-        ]
-      }
+  "functions": {
+    "api/nullstack.js": {
+      "includeFiles": "**/**"
     }
-  ],
+  },
   "routes": [
     {
       "src": "(.*)",
-      "dest": ".production/server.js"
+      "dest": "api/nullstack.js"
     }
   ]
 }
