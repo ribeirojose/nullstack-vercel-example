@@ -1,3 +1,3 @@
-import context from '../.production/server';
+import application from '../.production/server';
 
-export default context.server;
+export default application.server;

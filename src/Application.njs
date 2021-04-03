@@ -6,11 +6,6 @@ class Application extends Nullstack {
 
   static async start(context) {
     await this.startProject(context);
-    await this.startServer(context);
-  }
-
-  static async startServer({ server }) {
-    server.less = true
   }
 
   static async startProject({ project }) {
