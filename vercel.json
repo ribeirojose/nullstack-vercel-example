@@ -6,9 +6,7 @@
     }
   },
   "routes": [
-    {
-      "src": "(.*)",
-      "dest": "api/nullstack.js"
-    }
+    { "handle": "filesystem" },
+    { "src": "(.*)", "dest": "api/nullstack.js" }
   ]
 }
