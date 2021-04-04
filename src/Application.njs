@@ -2,6 +2,9 @@ import Nullstack from 'nullstack';
 import './Application.scss';
 import Home from './Home';
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 class Application extends Nullstack {
 
   static async start(context) {
@@ -9,6 +12,7 @@ class Application extends Nullstack {
   }
 
   static async startProject({ project }) {
+    await sleep(3000);
     project.name = 'Nullstack Vercel Example';
     project.domain = 'localhost';
     project.color = '#D22365';
